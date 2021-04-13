@@ -1,0 +1,45 @@
+﻿
+@model InAndOut.Models.Item
+
+<div class="card">
+    <div class="card-header">
+        <h1 class="text-primary">Add Item</h1>
+    </div>
+    <div class="card-body">
+        <form method="post" asp-action="Create">
+            <div class="row">
+                <div class="col">
+                    <label asp-for="ItemName"></label>
+                </div>
+                <div class="col">
+                    <label asp-for="Borrower"></label>
+                </div>
+                <div class="col">
+                    <label asp-for="Lender"></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input asp-for="ItemName" class="form-control" />
+                </div>
+                <div class="col">
+                    <input asp-for="Borrower" class="form-control" />
+                </div>
+                <div class="col">
+                    <input asp-for="Lender" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row m-3">
+                <div class="col-8 text-center offset-2 row">
+                    <div class="col">
+                        <input type="submit" class="btn btn-info w-75" value="create" />
+                    </div>
+                    <div class="col">
+                        <a asp-action="Index" class="btn btn-danger w-75">Back</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

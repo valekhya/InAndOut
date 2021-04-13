@@ -1,0 +1,38 @@
+﻿@model InAndOut.Models.Item
+
+<div class="container">
+    <div class="row">
+        <h1 class="text-primary">Update Item</h1>
+    </div>
+
+    <form method="post" asp-action="Update">
+        <div class="row">
+            <div class="col">
+                <label asp-for="ItemName"></label>
+            </div>
+            <div class="col">
+                <label asp-for="Borrower"></label>
+            </div>
+            <div class="col">
+                <label asp-for="Lender"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input asp-for="ItemName" class="form-control" value="@Model.ItemName" />
+            </div>
+            <div class="col">
+                <input asp-for="Borrower" class="form-control" value="@Model.Borrower" />
+            </div>
+            <div class="col">
+                <input asp-for="Lender" class="form-control" value="@Model.Lender" />
+            </div>
+        </div>
+        <div class="row form-group m-3">
+            <div class="col"><input class="btn btn-info w-75" type="submit" value="update" /></div>
+            <div class="col">
+                <a asp-action="Index" class="btn btn-danger w-75">Back</a>
+            </div>
+        </div>
+    </form>
+</div>
